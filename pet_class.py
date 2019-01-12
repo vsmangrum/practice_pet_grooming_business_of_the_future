@@ -56,3 +56,6 @@ print()
 dog = Pet("mangy", 10, 20, "broken and bald")
 
 dog.get_all()
+
+
+print("hello world")
