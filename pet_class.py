@@ -59,3 +59,8 @@ dog.get_all()
 
 
 print("hello world")
+
+hamster = Pet("butterscotch", 4, .88, "teensy nub")
+print()
+
+hamster.get_all()
