@@ -1,9 +1,16 @@
 class Pet():
-    def __init__(self, fur, height, weight, tail):
+    def __init__(self, fur, height, weight, tail,name):
         self.__fur = fur
         self.__height = height
         self.__weight = weight
         self.__tail = tail
+        self.__name = name
+
+    def set_name(self, name):
+        self.__tail = name
+
+    def get_name(self):
+        return self.__name
 
     def set_tail(self, shape):
         self.__tail = shape
@@ -15,7 +22,7 @@ class Pet():
         self.__fur = color
 
     def get_color(self):
-        return self.__fur
+        print(self.__fur)
 
     def set_height(self, new_height):
         self.__height = new_height
@@ -30,37 +37,41 @@ class Pet():
         return self.__weight
 
     def get_all(self):
+        print('===================')
         print(self.__fur)
         print(self.__height)
         print(self.__weight)
         print(self.__tail)
+        print(self.__name)
+        print('===================')
 
-Llama = Pet('spotted', 75, 290, 'nubby')
-
-Llama.set_height(69)
-
-var = Llama.get_height()
-print(var)
+'''
+list_of_aniamls = ['dog', 'cat', 'hamster', 'Llama']
 
 
-cat = Pet("striped", 14, 11, "crook")
-print(cat.get_tail())
-print()
+group = [0] * len(list_of_aniamls)
+def make_animal_list(list_of_animals,group):
 
-cat.get_all()
-print()
-Llama.get_all()
-print()
+    for x in range(len(list_of_aniamls)):
+        for each in list_of_aniamls:
+            fur = 'brown'
+            height = 10
+            weight = 20
+            tail = 'teensy nub'
+            group[x] = Pet(fur, height, weight, tail, list_of_aniamls[x])
 
-# Suzanne Don't forget that you're better than Jackson any day of the week.
-dog = Pet("mangy", 10, 20, "broken and bald")
-
-dog.get_all()
+    return group
 
 
-print("hello world")
+my_list = make_animal_list(list_of_aniamls, group)
 
-hamster = Pet("butterscotch", 4, .88, "teensy nub")
-print()
+my_list[2].set_color('butterscotch')
+my_list[2].get_color()
+my_list[2].get_all()
 
-hamster.get_all()
+for x in range(len(list_of_aniamls)):
+    my_list[x].get_all()
+'''
+
+
+
